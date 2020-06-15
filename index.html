@@ -2,33 +2,53 @@
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<link rel="styleshhet"  type="text/css" href="/style.css">
-<body>
+<link rel="stylesheet"  type="text/css" href="styles/style.css">
+    <script type = "text/javascript">
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function displayPreviousImage() {
+            x = (x <= 0) ? images.length - 1 : x - 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function startTimer() {
+            setInterval(displayNextImage, 3000);
+        }
+
+        var images = [], x = -1;
+        images[0] = "images/durga-2.jpg";
+        images[1] = "images/durga-4.png";
+        images[2] = "images/durga-1.png";
+    </script>
+</head>
+
+<body style="background-color:#ffed90" body onload = "startTimer()">
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">Dates</a></li>
-  <li><a href="#schedule">Schedule</a></li>
-  <li><a href="#dates">Dates</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-  <li style="float:right"><a class="active" href="RSVP">RSVP</a></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="dates.html">Dates</a></li>
+  <li><a href="schedule.html">Schedule</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="https://forms.gle/dFwaQ57drmuWNTs89">Registration</a></li>
+  <li style="float:right"><a href="contact.html">Contact</a></li>
 </ul>
   
-  <h4> Laksha Chandi Yaga </h4>
-  <h6> Dates </h6>
-  <h6> RSVP </h6>
+  <h1> Laksha Chandi Yaga </h1>
   
-<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-  <a href="#"><i class="fa fa-facebook-official"></i></a>
-  <a href="#"><i class="fa fa-pinterest-p"></i></a>
-  <a href="#"><i class="fa fa-twitter"></i></a>
-  <a href="#"><i class="fa fa-flickr"></i></a>
-  <a href="#"><i class="fa fa-linkedin"></i></a>
-  <p class="w3-medium">
-    Powered by <a href="https://www.gaushalausa.org" target="_blank">S3 Foundation</a>
-  </p>
+  <img id="img" class="image" src="images/durga-1.png" style="max-height: 400px; max-width: 500px"; alt="durga-image"/>
+  
+<footer class="social-footer">
+    <ul class="social-media-icons">
+      <li><a href="https://www.facebook.com/s3gaushala"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li><a href="https://instagram.com/s3gaushala?igshid=z73shk6mg270"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href="https://www.youtube.com/channel/UCyktTxawiWQGa0QQPdcjiMg"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+    </ul>
+    <p>Powered by <a href="https://www.gaushalausa.org" target="_blank">S3 Foundation</a></p>
 </footer>
 
 </body>
